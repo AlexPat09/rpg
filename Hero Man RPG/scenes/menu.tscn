@@ -1,13 +1,39 @@
-[gd_scene format=3 uid="uid://bvgtvkd3gg3b0"]
+[gd_scene load_steps=2 format=3 uid="uid://bvgtvkd3gg3b0"]
 
-[node name="Menu" type="CanvasLayer"]
+[ext_resource type="Texture2D" uid="uid://figxfl6nj7mk" path="res://assets/Man_000.png" id="1_t2f7h"]
 
-[node name="Control" type="Control" parent="."]
+[node name="Menu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-size_flags_horizontal = 6
-size_flags_vertical = 6
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.376471, 0.392157, 0.494118, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect"]
+modulate = Color(0.2, 0.184314, 0.380392, 1)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 208.0
+offset_top = 24.0
+offset_right = -202.0
+offset_bottom = 161.0
+grow_horizontal = 2
+theme_override_font_sizes/normal_font_size = 100
+text = "UNNAMED RPG"
+fit_content = true
+
+[node name="Sprite" type="Sprite2D" parent="ColorRect"]
+position = Vector2(576, 356)
+scale = Vector2(10, 10)
+texture = ExtResource("1_t2f7h")

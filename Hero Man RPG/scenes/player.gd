@@ -13,5 +13,9 @@ func _physics_process(delta):
 		velocity.y = directionY * SPEED
 	else:
 		velocity.y = move_toward(velocity.y, 0, SPEED)
+	if velocity.y > 0:
+		$AnimatedSprite2D.play("walk_front")
+	if velocity.y == 0 and velocity.x == 0:
+		$AnimatedSprite2D.play("idle")
 	move_and_slide()
-
+	

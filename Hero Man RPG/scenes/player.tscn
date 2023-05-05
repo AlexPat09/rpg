@@ -19,8 +19,14 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("3_yh2jf")
 }, {
+"duration": 0.5,
+"texture": ExtResource("1_6qk67")
+}, {
 "duration": 1.0,
 "texture": ExtResource("4_w70uw")
+}, {
+"duration": 0.5,
+"texture": ExtResource("1_6qk67")
 }],
 "loop": false,
 "name": &"walk_front",
@@ -28,18 +34,18 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rphg4"]
-radius = 3.0
+radius = 4.00001
 height = 18.0
 
 [node name="player" type="CharacterBody2D"]
 script = ExtResource("1_wruc2")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, -3)
+position = Vector2(0, -20)
 sprite_frames = SubResource("SpriteFrames_0brey")
-animation = &"idle"
+animation = &"walk_front"
 autoplay = "idle"
-offset = Vector2(0, -12)
+offset = Vector2(0, 5)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -11)

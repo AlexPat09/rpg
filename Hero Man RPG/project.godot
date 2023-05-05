@@ -14,10 +14,6 @@ config/name="Hero Man RPG"
 config/features=PackedStringArray("4.0", "GL Compatibility")
 config/icon="res://icon.svg"
 
-[display]
-
-window/stretch/aspect="keep_width"
-
 [importer_defaults]
 
 texture={

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://v44wai3n486h"
-path="res://.godot/imported/RPG_Tileset_01.png-89b9c0cbb5d50a57ecfce47ffa7a8915.ctex"
+uid="uid://bf7qhbyi0nw2y"
+path="res://.godot/imported/Light_001.png-6356842d7f67c58f18f46198fd7aa6fe.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/RPG_Tileset_01.png"
-dest_files=["res://.godot/imported/RPG_Tileset_01.png-89b9c0cbb5d50a57ecfce47ffa7a8915.ctex"]
+source_file="res://assets/Light_001.png"
+dest_files=["res://.godot/imported/Light_001.png-6356842d7f67c58f18f46198fd7aa6fe.ctex"]
 
 [params]
 

@@ -1,5 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://bvgtvkd3gg3b0"]
+[gd_scene load_steps=3 format=3 uid="uid://bvgtvkd3gg3b0"]
 
+[ext_resource type="Script" path="res://scenes/menu.gd" id="1_nxkj5"]
 [ext_resource type="Texture2D" uid="uid://figxfl6nj7mk" path="res://assets/Man_000.png" id="1_t2f7h"]
 
 [node name="Menu" type="Control"]
@@ -9,31 +10,78 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_nxkj5")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.376471, 0.392157, 0.494118, 1)
 
-[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect"]
+[node name="Control" type="Control" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Sprite" type="Sprite2D" parent="ColorRect/Control"]
+position = Vector2(0, 492)
+scale = Vector2(22, 22)
+texture = ExtResource("1_t2f7h")
+
+[node name="Control2" type="Control" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect/Control2"]
 modulate = Color(0.2, 0.184314, 0.380392, 1)
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_left = 208.0
+offset_left = 592.0
 offset_top = 24.0
-offset_right = -202.0
+offset_right = 182.0
 offset_bottom = 161.0
 grow_horizontal = 2
 theme_override_font_sizes/normal_font_size = 100
 text = "UNNAMED RPG"
 fit_content = true
 
-[node name="Sprite" type="Sprite2D" parent="ColorRect"]
-position = Vector2(576, 356)
-scale = Vector2(10, 10)
-texture = ExtResource("1_t2f7h")
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.65
+anchor_right = 0.65
+anchor_bottom = 1.0
+offset_left = 0.199951
+offset_top = 206.0
+offset_right = 470.2
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer"]
+modulate = Color(0.2, 0.184314, 0.380392, 1)
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 25
+text = "Colour:"
+fit_content = true
+scroll_active = false
+
+[node name="ColorPicker" type="ColorPicker" parent="VBoxContainer"]
+layout_mode = 2
+edit_alpha = false
+color_mode = 1
+picker_shape = 4
+can_add_swatches = false
+sampler_visible = false
+color_modes_visible = false
+hex_visible = false
+presets_visible = false
